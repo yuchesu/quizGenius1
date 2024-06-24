@@ -66,3 +66,6 @@ The quiz application allows users to take quizzes and view their results. The fo
 - Choose a quiz category and start the quiz.
 - Answer the questions and submit the quiz to view the results.
 - View the result of all quizzes taken from the user dashboard.
+
+## ER diagram
+<img width="600" alt="image" src="https://github.com/yuchesu/quizGenius1/assets/31570165/64e68cc9-aa88-40af-a099-8dd2b84773b0">
