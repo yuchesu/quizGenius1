@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if user.is_authenticated and user.is_active %}
+    <h2>Quiz Categories</h2>
+    {% for category in category_list %}
+        {% if category.is_active %}
+            <div class="card m-2 w-25">
+                <div class="card-body">
+                    <h4 class="card-title">{{ category.name }}</h4>
+                    <a href="{% url 'quiz_new' category.id %}" class="btn btn-primary">Start Quiz</a>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+        
+    <h2>Quiz History</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Taken Time</th>
+                <th>Result</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for quiz in quizzes %}
+                <tr>
+                    <td>{{ quiz.name }}</td>
+                    <td>{{ quiz.time_end }}</td>
+                    <td>{{ quiz.correct_answers }} / {{ quiz.quizquestion_set.count }}</td>
+                    <td><a href="{% url 'quiz_result' quiz.id %}">View Result</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}    
+{% endblock %}

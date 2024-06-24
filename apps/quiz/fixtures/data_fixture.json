@@ -1,0 +1,908 @@
+[
+  {
+    "model": "quiz.category",
+    "pk": 1,
+    "fields": {
+      "name": "Alcohol",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.category",
+    "pk": 2,
+    "fields": {
+      "name": "Earth",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.category",
+    "pk": 3,
+    "fields": {
+      "name": "Superhero",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "description": "What are the four main ingredients in beer?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 1,
+    "fields": {
+      "question": 1,
+      "description": "Grain, hops, yeast, and water",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 2,
+    "fields": {
+      "question": 1,
+      "description": "Grass, hops, yeast, and water",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 3,
+    "fields": {
+      "question": 1,
+      "description": "Grain, hops, yeast, and vinegar",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 4,
+    "fields": {
+      "question": 1,
+      "description": "Grain, hops, breadcrumbs, and water",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "description": "What popular cocktail takes its inspiration from Ernest Hemingway?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 5,
+    "fields": {
+      "question": 2,
+      "description": "Hemingway Daiquiri",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 6,
+    "fields": {
+      "question": 2,
+      "description": "Old Fashioned",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 7,
+    "fields": {
+      "question": 2,
+      "description": "Dry Martini",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 8,
+    "fields": {
+      "question": 2,
+      "description": "Margarita",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "description": "What drink uses Orange juice, Pineapple juice, Lime juice, Rum, and Grenadine?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 9,
+    "fields": {
+      "question": 3,
+      "description": "Caribbean Rum",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 10,
+    "fields": {
+      "question": 3,
+      "description": "Whiskey Sour",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 11,
+    "fields": {
+      "question": 3,
+      "description": "Manhattan",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 12,
+    "fields": {
+      "question": 3,
+      "description": "Mojito",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "description": "In most countries it is illegal to call sparkling wine by what name unless it was produced in certain region of France?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 13,
+    "fields": {
+      "question": 4,
+      "description": "Champagne",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 14,
+    "fields": {
+      "question": 4,
+      "description": "Gimlet",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 15,
+    "fields": {
+      "question": 4,
+      "description": "Penicillin",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 16,
+    "fields": {
+      "question": 4,
+      "description": "Sazerac",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 5,
+    "fields": {
+      "category": 1,
+      "description": "Guinness beer was first brewed in which country?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 17,
+    "fields": {
+      "question": 5,
+      "description": "Ireland",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 18,
+    "fields": {
+      "question": 5,
+      "description": "Italy",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 19,
+    "fields": {
+      "question": 5,
+      "description": "Argentina",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 20,
+    "fields": {
+      "question": 5,
+      "description": "Brasil",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 6,
+    "fields": {
+      "category": 1,
+      "description": "What is the national drink of Scotland?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 21,
+    "fields": {
+      "question": 6,
+      "description": "Scotch whisky",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 22,
+    "fields": {
+      "question": 6,
+      "description": "Whiskey Sour",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 23,
+    "fields": {
+      "question": 6,
+      "description": "Gimlet",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 24,
+    "fields": {
+      "question": 6,
+      "description": "Sazerac",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 7,
+    "fields": {
+      "category": 2,
+      "description": "In what month is the Earth closest to the sun?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 25,
+    "fields": {
+      "question": 7,
+      "description": "January",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 26,
+    "fields": {
+      "question": 7,
+      "description": "February",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 27,
+    "fields": {
+      "question": 7,
+      "description": "March",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 28,
+    "fields": {
+      "question": 7,
+      "description": "April",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 8,
+    "fields": {
+      "category": 2,
+      "description": "What is the world’s largest ocean?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 29,
+    "fields": {
+      "question": 8,
+      "description": "Pacific Ocean",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 30,
+    "fields": {
+      "question": 8,
+      "description": "Atlantic Ocean",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 31,
+    "fields": {
+      "question": 8,
+      "description": "Indian Ocean",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 32,
+    "fields": {
+      "question": 8,
+      "description": "Southern Ocean",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 9,
+    "fields": {
+      "category": 2,
+      "description": "How much of the earth’s surface is water mass?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 33,
+    "fields": {
+      "question": 9,
+      "description": "71%",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 34,
+    "fields": {
+      "question": 9,
+      "description": "61%",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 35,
+    "fields": {
+      "question": 9,
+      "description": "51%",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 36,
+    "fields": {
+      "question": 9,
+      "description": "41%",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 10,
+    "fields": {
+      "category": 2,
+      "description": "What month does Earth Day happen?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 37,
+    "fields": {
+      "question": 10,
+      "description": "April",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 38,
+    "fields": {
+      "question": 10,
+      "description": "March",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 39,
+    "fields": {
+      "question": 10,
+      "description": "February",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 40,
+    "fields": {
+      "question": 10,
+      "description": "January",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 11,
+    "fields": {
+      "category": 2,
+      "description": "How hot is the earth’s core?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 41,
+    "fields": {
+      "question": 11,
+      "description": "More than 9,300 F",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 42,
+    "fields": {
+      "question": 11,
+      "description": "8,300 F - 9,300 F",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 43,
+    "fields": {
+      "question": 11,
+      "description": "7,300 F - 8,300 F",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 44,
+    "fields": {
+      "question": 11,
+      "description": "Less than 7,300 F",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 12,
+    "fields": {
+      "category": 2,
+      "description": "What is the Earth’s axial tilt?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 45,
+    "fields": {
+      "question": 12,
+      "description": "23.5 degrees",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 46,
+    "fields": {
+      "question": 12,
+      "description": "22.5 degrees",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 47,
+    "fields": {
+      "question": 12,
+      "description": "21.5 degrees",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 48,
+    "fields": {
+      "question": 12,
+      "description": "20.5 degrees",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 13,
+    "fields": {
+      "category": 3,
+      "description": "Who is the leader of the Avengers?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 49,
+    "fields": {
+      "question": 13,
+      "description": "Iron Man",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 50,
+    "fields": {
+      "question": 13,
+      "description": "Ant-Man",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 51,
+    "fields": {
+      "question": 13,
+      "description": "Hulk",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 52,
+    "fields": {
+      "question": 13,
+      "description": "Thor",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 14,
+    "fields": {
+      "category": 3,
+      "description": "Who said the line: “With great power, comes great responsibility.”?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 53,
+    "fields": {
+      "question": 14,
+      "description": "Uncle Ben",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 54,
+    "fields": {
+      "question": 14,
+      "description": "Spider Man",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 55,
+    "fields": {
+      "question": 14,
+      "description": "Iron Man",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 56,
+    "fields": {
+      "question": 14,
+      "description": "Hulk",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 15,
+    "fields": {
+      "category": 3,
+      "description": "Who was the main supervillain in the Marvel Comic Series Infinity War?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 57,
+    "fields": {
+      "question": 15,
+      "description": "Thanos",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 58,
+    "fields": {
+      "question": 15,
+      "description": "Thor",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 59,
+    "fields": {
+      "question": 15,
+      "description": "Captain America",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 60,
+    "fields": {
+      "question": 15,
+      "description": "Hawkeye",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 16,
+    "fields": {
+      "category": 3,
+      "description": "How old was Peter Parker when he became Spiderman?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 61,
+    "fields": {
+      "question": 16,
+      "description": "15 years old",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 62,
+    "fields": {
+      "question": 16,
+      "description": "16 years old",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 63,
+    "fields": {
+      "question": 16,
+      "description": "17 years old",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 64,
+    "fields": {
+      "question": 16,
+      "description": "18 years old",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 17,
+    "fields": {
+      "category": 3,
+      "description": "What is the real name of Batman?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 65,
+    "fields": {
+      "question": 17,
+      "description": "Bruce Wayne",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 66,
+    "fields": {
+      "question": 17,
+      "description": "Peter Parker",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 67,
+    "fields": {
+      "question": 17,
+      "description": "Ryan Reynolds",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 68,
+    "fields": {
+      "question": 17,
+      "description": "Steve Rogers",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.question",
+    "pk": 18,
+    "fields": {
+      "category": 3,
+      "description": "Which superhero is a member of the Avengers and has the ability to shrink and grow in size?",
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 69,
+    "fields": {
+      "question": 18,
+      "description": "Ant-Man",
+      "is_correct": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 70,
+    "fields": {
+      "question": 18,
+      "description": "Iron Man",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 71,
+    "fields": {
+      "question": 18,
+      "description": "Hulk",
+      "is_correct": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "quiz.choice",
+    "pk": 72,
+    "fields": {
+      "question": 18,
+      "description": "Thor",
+      "is_correct": false,
+      "is_active": true
+    }
+  }
+]

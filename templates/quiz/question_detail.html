@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Question Detail</h2>
+  <p>Category: {{ question.category.name }}</p>
+  <p>Description: {{ question.description }}</p>
+    
+  <p>Choices:</p>
+    <ul>
+        {% for choice in question.choice_set.all %}
+            <li>{{ choice.description }} {% if choice.is_correct %}(Correct){% endif %}</li>
+        {% endfor %}
+    </ul>
+    
+  <p>Correct Answer: {{ question.get_correct_choice.description }}</p>
+  <p>Status: {% if question.is_active %}Active{% else %}Inactive{% endif %}</p>
+  <a href="{% url 'question_list' %}" class="btn btn-primary">Back</a>
+  <a href="{% url 'question_update' pk=question.pk %}" class="btn btn-warning">Edit</a>
+{% endblock %}
+
+

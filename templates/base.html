@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}QuizGenius{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">QuizGenius</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    {% if user.is_authenticated and not user.is_staff %}
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    {% endif %}
+                    {% if perms.accounts.can_change_user %}
+                        <a class="nav-link" href="{% url 'user_management' %}">User Management</a>
+                    {% endif %}
+                    {% if perms.quiz.can_change_quiz %}
+                        <a class="nav-link" href="{% url 'quiz_result_management' %}">Quiz Management</a>
+                    {% endif %}
+                    {% if perms.quiz.can_change_question %}
+                        <a class="nav-link" href="{% url 'question_list' %}">Question Management</a>
+                    {% endif %}
+                    {% if perms.quiz.can_change_category %}
+                        <a class="nav-link" href="{% url 'category_list' %}">Category Management</a>
+                    {% endif %}
+                </div>
+                <div class="navbar-nav">
+                    {% if user.is_authenticated %}
+                        <div class="navbar-nav ms-3">
+                            <span class="nav-link text-white">Hi, {{ user.username }}</span>
+                            <form action="{% url 'logout' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-outline-light">Logout</button>
+                            </form>
+                        </div>
+                    {% else %}
+                        <div class="text-end">
+                            <a class="btn btn-dark" href="{% url 'login' %}">Log In</a>
+                            <a class="btn btn-outline-light ms-2" href="{% url 'signup' %}">Sign Up</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>

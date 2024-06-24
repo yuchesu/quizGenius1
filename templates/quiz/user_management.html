@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>User Management</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone</th>
+        <th>Quiz Count</th>
+        <th>Status</th>
+        <th>Action</th>
+        <th>Quizzes</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.firstname }}</td>
+          <td>{{ user.lastname }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.quiz_set.count }}</td>
+            {% if user.is_active %}
+              <td> Active </td>
+            {% else %}
+              <td> Suspended </td>
+            {% endif %}
+          <td>
+            {% if user.is_active %}
+              <a href="{% url 'suspend_user' user.id %}">Inactivate</a>
+            {% else %}
+              <a href="{% url 'activate_user' user.id %}">Activate</a>
+            {% endif %}
+          </td>
+          <td>
+            <a href="{% url 'quiz_result_management_user' user.id %}">Quizzes</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

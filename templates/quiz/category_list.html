@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Category Management</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for category in categories %}
+        <tr>
+          <td>{{ category.name }}</td>
+          <td>{% if category.is_active %}Active{% else %}Inactive{% endif %}</td>
+          <td>
+            <a href="{% url 'category_update' pk=category.pk %}" class="btn btn-warning">Edit</a>
+            <a href="{% url 'toggle_category_status' pk=category.pk %}" class="btn btn-secondary">Toggle Status</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="{% url 'category_create' %}" class="btn btn-success">Add Category</a>
+{% endblock %}

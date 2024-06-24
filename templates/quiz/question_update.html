@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Edit Question and Choices</h2>
+  <form method="post">
+    {% csrf_token %}
+    <h5>Question</h5>
+    {{ form.as_p }}
+    <!-- Render the category as a readonly field -->
+    {{ form.category.as_hidden }}
+
+    <h5>Choices</h5>
+{#    {{ choice_form.as_p }}#}
+
+    {{ choice_formset.management_form }}
+    {% for form in choice_formset.forms %}
+      {{ form.as_table }} <br>
+    {% endfor %}
+
+    <br><br>&nbsp;&nbsp;<button type="submit" class="btn btn-primary">Save changes</button>
+  </form>
+  <a href="{% url 'question_list' %}" class="btn btn-secondary">Cancel</a>
+{% endblock %}

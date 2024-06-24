@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Quiz Result Management</h2>
+
+    <form method="get" action="{% url 'quiz_result_management' %}">
+        <label for="category_filter">Filter by Category:</label>
+        <select name="category_filter" id="category_filter">
+            <option value="">All Categories</option>
+            {% for category in categories %}
+                <option value="{{ category.id }}" {% if category.id == selected_category %}selected{% endif %}>
+                    {{ category.name }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <label for="user_filter">Filter by User:</label>
+        <select name="user_filter" id="user_filter">
+            <option value="">All Users</option>
+            {% for user in users %}
+                <option value="{{ user.id }}" {% if user.id == selected_user %}selected{% endif %}>
+                    {{ user.username }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Apply Filters</button>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Taken Time</th>
+                <th>Category</th>
+                <th>User Full Name</th>
+                <th>Score</th>
+                <th>Result</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in quiz_results %}
+                <tr>
+                    <td>{{ result.time_end }}</td>
+                    <td>{{ result.category.name }}</td>
+                    <td>{{ result.user.username }}</td>
+                    <td>{{ result.calculate_correct_answers }} / {{ result.quizquestion_set.count }}</td>
+                    <td>{% if result.passed %}Passed{% else %}Failed{% endif %}</td>
+                    <td><a href="{% url 'quiz_result' quiz_id=result.id %}">View Details</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
